@@ -241,10 +241,12 @@
   };
 
   $scope.refresh = function () {
-    $scope.qbGrid.refresh();
-    $scope.rbGrid.refresh();
-    $scope.wrGrid.refresh();
-    $scope.teGrid.refresh();
+    if ($scope.validator.validate()) {
+      $scope.qbGrid.refresh();
+      $scope.rbGrid.refresh();
+      $scope.wrGrid.refresh();
+      $scope.teGrid.refresh();
+    }
   };
 
   $scope.tabChange = function (e) {
