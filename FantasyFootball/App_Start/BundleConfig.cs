@@ -28,10 +28,12 @@ namespace FantasyFootball
         ));
 
       bundles.Add(new StyleBundle("~/Content/css").Include(
-                "~/Content/bootstrap.css",
+                "~/Content/css/bootstrap.css",
+                "~/Content/css/business-casual.css",
                 "~/Content/kendo/2014.1.318/kendo.common.min.css",
-                "~/Content/kendo/2014.1.318/kendo.common-bootstrap.min.css",
-                "~/Content/kendo/2014.1.318/kendo.bootstrap.min.css",
+                "~/Content/kendo/2014.1.318/kendo.black.min.css",
+                //"~/Content/kendo/2014.1.318/kendo.common-bootstrap.min.css",
+                //"~/Content/kendo/2014.1.318/kendo.bootstrap.min.css",
                 "~/Content/site.css"));
     }
   }

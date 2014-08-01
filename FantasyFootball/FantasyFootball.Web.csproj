@@ -157,8 +157,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\css\bootstrap.css" />
+    <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\css\business-casual.css" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\img\bg.jpg" />
+    <Content Include="Content\img\intro-pic.jpg" />
+    <Content Include="Content\img\slide-1.jpg" />
+    <Content Include="Content\img\slide-2.jpg" />
+    <Content Include="Content\img\slide-3.jpg" />
     <Content Include="Content\kendo\2014.1.318\Black\editor.png" />
     <Content Include="Content\kendo\2014.1.318\Black\imagebrowser.png" />
     <Content Include="Content\kendo\2014.1.318\Black\indeterminate.gif" />
@@ -343,6 +350,9 @@
     <Content Include="Content\kendo\2014.1.318\images\kendoui.ttf" />
     <Content Include="Scripts\app\projectionCalculator.js" />
     <Content Include="Scripts\angular.min.js.map" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

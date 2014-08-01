@@ -2,71 +2,108 @@
     ViewBag.Title = "Home Page";
 }
 <div ng-controller="FantasyFootballCtrl">
-    <div id="settings">
-        <div class="form-group">
-           1 point for every
-            <input name="PassYards" type="number" class="input-sm" ng-model="settings.passYards" ng-change="refresh()" />
-            passing yards.
+    <div class="row">
+        <div class="box">
+            <div class="col-lg-12">
+                <div id="settings">
+                    <form class="form-horizontal">
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <span class="col-xs-3">
+                                    <input name="PassYards" type="text" class="form-control input-sm" ng-model="settings.passYards" ng-change="refresh()" />
+                                </span>
+                                <label class="control-label">passing yards per point.</label>
+
+                            </div>
+                            <div class="form-group">
+                                <span class="col-xs-3">
+                                    <input name="PassTDs" type="text" class="form-control input-sm" ng-model="settings.passTds" ng-change="refresh()" />
+                                </span>
+                                <label class="control-label">points for every passing TD.</label>
+
+                            </div>
+
+                            <div class="form-group">
+                                <span class="col-xs-3">
+                                    <input name="PassInt" type="text" class="form-control input-sm" ng-model="settings.passInt" ng-change="refresh()" />
+                                </span>
+                                <label class="control-label">points deducted per INT thrown.</label>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <span class="col-xs-3">
+                                    <input name="RushYards" type="text" class="form-control input-sm" ng-model="settings.rushYards" ng-change="refresh()" />
+                                </span>
+                                <label class="control-label">rushing yards per point.</label>
+                            </div>
+                            <div class="form-group">
+                                <span class="col-xs-3">
+                                    <input name="RushTDs" type="text" class="form-control input-sm" ng-model="settings.rushTds" ng-change="refresh()" />
+                                </span>
+                                <label class="control-label">points for every rushing TD.</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <span class="col-xs-3">
+                                    <input name="Receptions" type="text" class="form-control input-sm" ng-model="settings.receptions" ng-change="refresh()" />
+                                </span>
+                                <label class="control-label">points per reception.</label>
+
+                            </div>
+                            <div class="form-group">
+                                <span class="col-xs-3">
+                                    <input name="ReceivingYards" type="text" class="form-control input-sm" ng-model="settings.receptionYards" ng-change="refresh()" />
+                                </span>
+                                <label class="control-label">receiving yards per point.</label>
+                            </div>
+                            <div class="form-group">
+                                <span class="col-xs-3">
+                                    <input name="ReceivingTDs" type="text" class="form-control input-sm" ng-model="settings.receptionTds" ng-change="refresh()" />
+                                </span>
+                                <label class="control-label">for every receiving TD.</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-        <div class="form-group">
-            <input name="PassTDs" type="number" ng-model="settings.passTds" ng-change="refresh()" />
-            points for every passing TD.
-        </div>
-        <div class="form-group">
-            <input name="PassInt" type="number" ng-model="settings.passInt" ng-change="refresh()" />
-            points deducted per INT thrown.
-        </div>
-        <div class="form-group">
-            1 point for every
-            <input name="RushYards" type="number" ng-model="settings.rushYards" ng-change="refresh()" />
-            rushing yards.
-        </div>
-        <div class="form-group">
-            <input name="RushTDs" type="number" ng-model="settings.rushTds" ng-change="refresh()" />
-            points for every rushing TD.
-        </div>
-        <div class="form-group">
-            <input name="Receptions" type="number" ng-model="settings.receptions" ng-change="refresh()" />
-            per reception.
-        </div>
-        <div class="form-group">
-            1 point for every
-            <input name="ReceivingYards" type="number" ng-model="settings.receptionYards" ng-change="refresh()" />
-            receiving yards.
-        </div>
-        <div class="form-group">
-            <input name="ReceivingTDs" type="number" ng-model="settings.receptionTds" ng-change="refresh()" />
-            for every receiving TD.
-        </div>
-        
     </div>
 
-    <div id="players">
-        <div kendo-tab-strip k-on-select="tabChange(kendoEvent)">
-            <ul>
-                <li class="k-state-active" data-position="0">QB</li>
-                <li data-position="1">RB</li>
-                <li data-position="2">WR</li>
-                <li data-position="3">TE</li>
-            </ul>
-            
-            <div id="qb">
-                <div kendo-grid="qbGrid" k-options="qbGridOptions"></div> 
-            </div>
-            
-            <div id="rb">
-                <div kendo-grid="rbGrid" k-options="rbGridOptions"></div>
-            </div>
-            
-            <div id="wr">
-                <div kendo-grid="wrGrid" k-options="wrGridOptions"></div>
-            </div>
-            
-            <div id="te">
-                <div kendo-grid="teGrid" k-options="teGridOptions"></div>
+    <div class="row">
+        <div class="box">
+            <div class="col-lg-12">
+                <div id="players">
+                    <div kendo-tab-strip k-on-select="tabChange(kendoEvent)">
+                        <ul>
+                            <li class="k-state-active" data-position="0">QB</li>
+                            <li data-position="1">RB</li>
+                            <li data-position="2">WR</li>
+                            <li data-position="3">TE</li>
+                        </ul>
+
+                        <div id="qb">
+                            <div kendo-grid="qbGrid" k-options="qbGridOptions"></div>
+                        </div>
+
+                        <div id="rb">
+                            <div kendo-grid="rbGrid" k-options="rbGridOptions"></div>
+                        </div>
+
+                        <div id="wr">
+                            <div kendo-grid="wrGrid" k-options="wrGridOptions"></div>
+                        </div>
+
+                        <div id="te">
+                            <div kendo-grid="teGrid" k-options="teGridOptions"></div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
-        
     </div>
 </div>
-
