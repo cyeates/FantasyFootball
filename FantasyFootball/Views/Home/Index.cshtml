@@ -5,6 +5,8 @@
     <div class="row">
         <div class="box">
             <div class="col-lg-12">
+                <h1>Scoring Settings</h1>
+                <p>Enter your fantasy football league's scoring settings.</p>
                 <div id="settings">
                     <form kendo-validator="validator" class="form-horizontal">
 
@@ -97,8 +99,10 @@
     <div class="row">
         <div class="box">
             <div class="col-lg-12">
+                <h1>Projections</h1>
+                <p>Projections will update as you adjust the scoring settings.</p>
                 <div id="players">
-                    <div kendo-tab-strip k-on-select="tabChange(kendoEvent)">
+                    <div kendo-tab-strip k-animation="false" k-on-select="tabChange(kendoEvent)">
                         <ul>
                             <li class="k-state-active" data-position="0">QB</li>
                             <li data-position="1">RB</li>
