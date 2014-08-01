@@ -1,14 +1,27 @@
 ﻿
-var ProjectionCalculator = (function (settings) {
+app.factory("projectionCalculator", function () {
+  
+  var getPassingProjection = function(dataItem, settings) {
+    return (dataItem.passYards / settings.passYards) + (dataItem.passTds * settings.passTds) - (dataItem.passInt * settings.passInt);
+  };
 
-  var getPassingProjection = function(dataItem) {
-    return (dataItem.passYards / settings.get("passYards")) + (settings.get("passTds") * dataItem.passTds);
+  var getRushingProjection = function(dataItem, settings) {
+    return (dataItem.rushYards / settings.rushYards) + (dataItem.rushTds * settings.rushTds);
+  };
+
+  var getReceivingProjection = function(dataItem, settings) {
+    return (dataItem.receptionYards / settings.receptionYards) + (dataItem.receptionTds * settings.receptionTds) + (dataItem.receptions * settings.receptions);
+  };
+
+  var getMiscProjection = function(dataItem, settings) {
+    return (dataItem.fumbles * settings.fumbles) + (dataItem.twoPts * settings.twoPts);
   };
 
   return {
     
-    calculate: function (dataItem) {
-      return getPassingProjection(dataItem);
+    calculate: function (dataItem, settings) {
+      return getPassingProjection(dataItem, settings) + getRushingProjection(dataItem, settings) +
+             getReceivingProjection(dataItem, settings) + getMiscProjection(dataItem, settings);
     }
   };
-}());
+});
