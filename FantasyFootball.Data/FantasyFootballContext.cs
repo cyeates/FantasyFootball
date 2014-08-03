@@ -11,5 +11,6 @@ namespace FantasyFootball.Data
     public class FantasyFootballContext : DbContext
     {
       public DbSet<Player> Players { get; set; }
+      public DbSet<OffensiveProjections> OffensiveProjections { get; set; }
     }
 }

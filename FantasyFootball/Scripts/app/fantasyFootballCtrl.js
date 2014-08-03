@@ -1,4 +1,4 @@
-﻿function FantasyFootballCtrl($scope, projectionCalculator, playersRepository) {
+﻿function FantasyFootballCtrl($scope, playersRepository, projectionCalculator) {
 
   $scope.settings = {
     passYards: 25, //1 point for every 25 yards
@@ -252,7 +252,6 @@
       $scope.teGrid.refresh();
     }
   };
-
 
   playersRepository.get().then(function(result) {
     qbDataSource.data(result.quarterbacks);

@@ -29,7 +29,7 @@ namespace FantasyFootball.Data.Repositories
       var players = HttpContext.Current.Cache[KEY] as List<Player>;
       if (players == null)
       {
-        players = _context.Players.ToList();
+        players = _context.Players.Include("OffensiveProjections").ToList();
         HttpContext.Current.Cache.Insert(KEY, players);
 
       }

@@ -150,9 +150,11 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\Api\PlayersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Extensions\PlayerExtensions.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\OffensivePlayer.cs" />
     <Compile Include="Models\Players.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

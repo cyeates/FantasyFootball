@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\OffensiveProjections.cs" />
     <Compile Include="FantasyFootballContext.cs" />
     <Compile Include="Entities\Player.cs" />
     <Compile Include="Entities\Position.cs" />
