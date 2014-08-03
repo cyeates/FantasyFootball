@@ -18,20 +18,12 @@ namespace FantasyFootball.Controllers.Api
     {
       _playersService = playersService;
     }
-
-    // GET api/<controller>
+    
     public IEnumerable<Player> Get()
     {
       return _playersService.GetPlayers();
      
     }
-
-    //// GET api/<controller>/5
-    //public string Get(int id)
-    //{
-    //  return "value";
-    //}
-
     
   }
 }
