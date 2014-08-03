@@ -252,14 +252,12 @@
       $scope.teGrid.refresh();
     }
   };
-
-  var scope = $scope;
+  
   playersRepository.get().then(function(result) {
-    qbDataSource.data(result.quarterbacks);
     rbDataSource.data(result.runningbacks);
     wrDataSource.data(result.wideReceivers);
     teDataSource.data(result.tightEnds);
-    scope.refresh();
-  });
+    qbDataSource.data(result.quarterbacks);
+   });
 
 };

@@ -338,7 +338,6 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
     <Content Include="Scripts\angular-kendo.js" />
     <Content Include="Scripts\angular-kendo.min.js" />
     <Content Include="Scripts\angular-mocks.js" />
