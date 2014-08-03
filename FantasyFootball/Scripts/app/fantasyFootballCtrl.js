@@ -14,11 +14,6 @@
   };
   
   var dataSourceSettings = {
-    transport: {
-      read: {
-        url: "/api/Players"
-      }
-    },
     pageSize: 25,
     schema: {
       model: {
