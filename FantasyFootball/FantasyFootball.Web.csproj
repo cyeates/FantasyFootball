@@ -340,10 +340,13 @@
     <Content Include="Scripts\angular-kendo.js" />
     <Content Include="Scripts\angular-kendo.min.js" />
     <Content Include="Scripts\angular-mocks.js" />
+    <Content Include="Scripts\angular-resource.js" />
+    <Content Include="Scripts\angular-resource.min.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\app\app.js" />
     <Content Include="Scripts\app\fantasyFootballCtrl.js" />
+    <Content Include="Scripts\app\playersRepository.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Content\kendo\2014.1.318\images\kendoui.woff" />

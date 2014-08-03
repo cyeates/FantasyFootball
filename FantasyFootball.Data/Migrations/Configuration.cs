@@ -14,6 +14,7 @@ namespace FantasyFootball.Data.Migrations
     public Configuration()
     {
       AutomaticMigrationsEnabled = true;
+      AutomaticMigrationDataLossAllowed = true;
     }
 
     protected override void Seed(FantasyFootball.Data.FantasyFootballContext context)

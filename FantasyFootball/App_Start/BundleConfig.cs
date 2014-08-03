@@ -22,6 +22,7 @@ namespace FantasyFootball
         "~/Scripts/bootstrap.js",
         "~/Scripts/respond.js",
         "~/Scripts/angular.js",
+        "~/Scripts/angular-resource.js",
         "~/Scripts/kendo/2014.1.318/kendo.web.min.js",
         "~/Scripts/angular-kendo.js",
         "~/Scripts/app/*.js"

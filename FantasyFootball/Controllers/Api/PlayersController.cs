@@ -7,6 +7,7 @@ using System.Web;
 using System.Web.Http;
 using FantasyFootball.Data.Entities;
 using FantasyFootball.Domain;
+using FantasyFootball.Models;
 
 namespace FantasyFootball.Controllers.Api
 {
@@ -19,9 +20,10 @@ namespace FantasyFootball.Controllers.Api
       _playersService = playersService;
     }
     
-    public IEnumerable<Player> Get()
+    public Players Get()
     {
-      return _playersService.GetPlayers();
+      var players = _playersService.GetPlayers();
+      return new Players(players);
      
     }
     

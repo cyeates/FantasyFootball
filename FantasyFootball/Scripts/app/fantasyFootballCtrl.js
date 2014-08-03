@@ -1,4 +1,4 @@
-﻿function FantasyFootballCtrl($scope, projectionCalculator) {
+﻿function FantasyFootballCtrl($scope, projectionCalculator, playersRepository) {
 
   $scope.settings = {
     passYards: 25, //1 point for every 25 yards
@@ -12,15 +12,14 @@
     twoPts: 2,
     fumbles: -2
   };
-
-  $scope.dataSource = new kendo.data.DataSource({
+  
+  var dataSourceSettings = {
     transport: {
       read: {
         url: "/api/Players"
       }
     },
     pageSize: 25,
-    filter: { field: "position", operator: "eq", value: "0" },
     schema: {
       model: {
         id: "playerId",
@@ -42,10 +41,15 @@
         }
       }
     }
-  });
+  };
+  
+  var qbDataSource = new kendo.data.DataSource(dataSourceSettings);
+  var rbDataSource = new kendo.data.DataSource(dataSourceSettings);
+  var wrDataSource = new kendo.data.DataSource(dataSourceSettings);
+  var teDataSource = new kendo.data.DataSource(dataSourceSettings);
 
   $scope.qbGridOptions = {
-    dataSource: $scope.dataSource,
+    dataSource: qbDataSource,
     pageable: true,
     columns: [
       {
@@ -96,7 +100,7 @@
   };
 
   $scope.rbGridOptions = {
-    dataSource: $scope.dataSource,
+    dataSource: rbDataSource,
     pageable: true,
     columns: [
       {
@@ -147,7 +151,7 @@
   };
 
   $scope.wrGridOptions = {
-    dataSource: $scope.dataSource,
+    dataSource: wrDataSource,
     pageable: true,
     columns: [
       {
@@ -199,7 +203,7 @@
   };
 
   $scope.teGridOptions = {
-    dataSource: $scope.dataSource,
+    dataSource: teDataSource,
     pageable: true,
     columns: [
       {
@@ -249,9 +253,12 @@
     }
   };
 
-  $scope.tabChange = function (e) {
-    var position = $(e.item).attr("data-position");
-    $scope.dataSource.filter({ field: "position", operator: "eq", value: position });
-  };
+
+  playersRepository.get().then(function(result) {
+    qbDataSource.data(result.quarterbacks);
+    rbDataSource.data(result.runningbacks);
+    wrDataSource.data(result.wideReceivers);
+    teDataSource.data(result.tightEnds);
+  });
 
 };

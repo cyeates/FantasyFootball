@@ -1,1 +1,1 @@
-﻿var app = angular.module("fantasy-football", ["kendo.directives"]);
+﻿var app = angular.module("fantasy-football", ["kendo.directives", "ngResource"]);
