@@ -30,7 +30,7 @@ namespace FantasyFootball
 
 
 
-      bundles.Add(new StyleBundle("~/Styles/css").Include(
+      bundles.Add(new StyleBundle("~/Content/css").Include(
                 "~/Content/css/bootstrap.css",
                 "~/Content/css/business-casual.css",
                 "~/Content/kendo/2014.1.318/kendo.common.min.css",
