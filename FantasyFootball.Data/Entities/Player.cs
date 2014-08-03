@@ -22,6 +22,6 @@ namespace FantasyFootball.Data.Entities
     public double ReceptionTds { get; set; }
     public double TwoPts { get; set; }
     public double Fumbles { get; set; }
-    public int Test { get; set; }
+    
   }
 }
