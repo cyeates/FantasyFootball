@@ -1,5 +1,5 @@
 ﻿app.controller('FantasyFootballCtrl', ["$scope", "playersRepository", "projectionCalculator", function ($scope, playersRepository, projectionCalculator) {
-
+  $scope.showLoadingIndicator = true;
   $scope.settings = {
     passYards: 25, //1 point for every 25 yards
     passTds: 4,
@@ -248,11 +248,17 @@
     }
   };
   
-  playersRepository.get().then(function(result) {
+  playersRepository.get().then(function (result) {
+
     rbDataSource.data(result.runningbacks);
     wrDataSource.data(result.wideReceivers);
     teDataSource.data(result.tightEnds);
     qbDataSource.data(result.quarterbacks);
-   });
+    showPage();
+  }.bind(this));
 
+  var showPage = function() {
+    $scope.showLoadingIndicator = false;
+    angular.element("#players").removeClass("hide");
+  };
 }]);

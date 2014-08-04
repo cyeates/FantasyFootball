@@ -101,9 +101,10 @@
             <div class="col-lg-12">
                 <h1>Projected Fantasy Points</h1>
                 <p>Projected Points will update as you adjust the scoring settings.</p>
-                <div id="players">
+                <div ng-show="showLoadingIndicator"><p>Loading...</p></div>
+                <div ng-hide="showLoadingIndicator" class="hide" id="players">
                     <div kendo-tab-strip k-animation="false">
-                        <ul>
+                        <ul class="tabstrip">
                             <li class="k-state-active">QB</li>
                             <li>RB</li>
                             <li>WR</li>
