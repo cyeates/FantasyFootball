@@ -1,4 +1,4 @@
-﻿function FantasyFootballCtrl($scope, playersRepository, projectionCalculator) {
+﻿app.controller('FantasyFootballCtrl', ["$scope", "playersRepository", "projectionCalculator", function ($scope, playersRepository, projectionCalculator) {
 
   $scope.settings = {
     passYards: 25, //1 point for every 25 yards
@@ -255,4 +255,4 @@
     qbDataSource.data(result.quarterbacks);
    });
 
-};
+}]);

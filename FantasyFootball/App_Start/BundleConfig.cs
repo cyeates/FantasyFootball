@@ -30,11 +30,11 @@ namespace FantasyFootball
 
 
 
-      bundles.Add(new StyleBundle("~/Content/css").Include(
-                "~/Content/css/bootstrap.css",
-                "~/Content/css/business-casual.css",
-                "~/Content/kendo/2014.1.318/kendo.common.min.css",
-                "~/Content/kendo/2014.1.318/kendo.black.min.css"));
+      bundles.Add(new StyleBundle("~/bundles/css")
+              .Include("~/Content/css/bootstrap.css")
+              .Include("~/Content/css/business-casual.css", new CssRewriteUrlTransform())
+              .Include("~/Content/kendo/2014.1.318/kendo.common.min.css")
+              .Include("~/Content/kendo/2014.1.318/kendo.black.min.css", new CssRewriteUrlTransform()));
     }
   }
 }
