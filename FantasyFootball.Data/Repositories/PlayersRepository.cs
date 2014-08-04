@@ -30,7 +30,7 @@ namespace FantasyFootball.Data.Repositories
       if (players == null)
       {
         players = _context.Players.Include("OffensiveProjections").ToList();
-        HttpContext.Current.Cache.Insert(KEY, players);
+        HttpContext.Current.Cache.Insert(KEY, players, null, DateTime.Now.AddDays(7), TimeSpan.Zero );
 
       }
 
