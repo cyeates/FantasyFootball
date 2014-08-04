@@ -57,22 +57,22 @@
       },
       {
         field: "passYards",
-        title: "Passing Yards",
+        title: "Pass Yards",
         format: "{0:n1}"
       },
       {
         field: "passTds",
-        title: "Passing TDs",
+        title: "Pass TDs",
         format: "{0:n1}"
       },
       {
         field: "passInt",
-        title: "Interceptions",
+        title: "INTs",
         format: "{0:n1}"
       },
       {
         field: "rushYards",
-        title: "Rushing Yards",
+        title: "Rush Yards",
         format: "{0:n1}"
       },
       {
@@ -82,11 +82,11 @@
       },
       {
         field: "fumbles",
-        title: "Fumbles Lost",
+        title: "Fumbles",
         format: "{0:n1}"
       },
       {
-        field: "Projection",
+        field: "Projected Pts",
         template: function (dataItem) {
           var projection = projectionCalculator.calculate(dataItem, $scope.settings);
           return kendo.format("{0:n1}", projection);
@@ -108,12 +108,12 @@
       },
       {
         field: "rushYards",
-        title: "Rushing Yards",
+        title: "Rush Yards",
         format: "{0:n1}"
       },
       {
         field: "rushTds",
-        title: "Rushing TDs",
+        title: "Rush TDs",
         format: "{0:n1}"
       },
        {
@@ -133,11 +133,11 @@
       },
       {
         field: "fumbles",
-        title: "Fumbles Lost",
+        title: "Fumbles",
         format: "{0:n1}"
       },
       {
-        field: "Projection",
+        field: "Projected Pts",
         template: function(dataItem) {
           var projection = projectionCalculator.calculate(dataItem, $scope.settings);
           return kendo.format("{0:n1}", projection);
@@ -159,12 +159,12 @@
       },
       {
         field: "rushYards",
-        title: "Rushing Yards",
+        title: "Rush Yards",
         format: "{0:n1}"
       },
       {
         field: "rushTds",
-        title: "Rushing TDs",
+        title: "Rush TDs",
         format: "{0:n1}"
       },
       {
@@ -184,11 +184,11 @@
       },
       {
         field: "fumbles",
-        title: "Fumbles Lost",
+        title: "Fumbles",
         format: "{0:n1}"
       },
       {
-        field: "Projection",
+        field: "Projected Pts",
         template: function(dataItem) {
           var projection = projectionCalculator.calculate(dataItem, $scope.settings);
           return kendo.format("{0:n1}", projection);
@@ -226,11 +226,11 @@
       },
       {
         field: "fumbles",
-        title: "Fumbles Lost",
+        title: "Fumbles",
         format: "{0:n1}"
       },
       {
-        field: "Projection",
+        field: "Projected Pts",
         template: function (dataItem) {
           var projection = projectionCalculator.calculate(dataItem, $scope.settings);
           return kendo.format("{0:n1}", projection);
