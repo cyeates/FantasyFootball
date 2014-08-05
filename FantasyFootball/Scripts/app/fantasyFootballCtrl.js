@@ -255,7 +255,7 @@
     teDataSource.data(result.tightEnds);
     qbDataSource.data(result.quarterbacks);
     showPage();
-  }.bind(this));
+  });
 
   var showPage = function() {
     $scope.showLoadingIndicator = false;

@@ -10,9 +10,9 @@ namespace FantasyFootball.Extensions
   public static class PlayerExtensions
   {
 
-    public static IEnumerable<OffensivePlayer>ToOffensivePlayers(this IEnumerable<Player> source)
+    public static IEnumerable<OffensivePlayer> ToOffensivePlayers(this IEnumerable<Player> source)
     {
-      return source.Where(p => p.OffensiveProjections!= null).Select(p => new OffensivePlayer
+      return source.Where(p => p.OffensiveProjections != null).Select(p => new OffensivePlayer
       {
         PlayerId = p.PlayerId,
         Name = p.Name,

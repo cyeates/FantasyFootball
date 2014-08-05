@@ -8,28 +8,23 @@ namespace FantasyFootball
     // For more information on bundling, visit http://go.microsoft.com/fwlink/?LinkId=301862
     public static void RegisterBundles(BundleCollection bundles)
     {
-     
-      // Use the development version of Modernizr to develop with and learn from. Then, when you're
-      // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
-      bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
-                  "~/Scripts/modernizr-*"));
 
-      bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-               ));
+      bundles.Add(new Bundle("~/bundles/jquery", "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js")
+              .Include("~/Scripts/jquery-{version}.js"));
+
+      bundles.UseCdn = true;
 
       bundles.Add(new ScriptBundle("~/bundles/scripts").Include(
-        "~/Scripts/jquery-{version}.js",
-        "~/Scripts/bootstrap.js",
-        "~/Scripts/respond.js",
         "~/Scripts/angular.js",
         "~/Scripts/angular-resource.js",
-        "~/Scripts/kendo/2014.1.318/kendo.core.min.js",
-        "~/Scripts/kendo/2014.1.318/kendo.data.min.js",
-        "~/Scripts/kendo/2014.1.318/kendo.pager.min.js",
-        "~/Scripts/kendo/2014.1.318/kendo.tabstrip.min.js",
-        "~/Scripts/kendo/2014.1.318/kendo.grid.min.js",
-        "~/Scripts/kendo/2014.1.318/kendo.validator.min.js",
-        //"~/Scripts/kendo/2014.1.318/kendo.web.min.js",
+        "~/Scripts/kendo/2014.1.318/kendo.web.min.js",
+        //"~/Scripts/kendo/2014.1.318/kendo.core.min.js",
+        //"~/Scripts/kendo/2014.1.318/kendo.data.min.js",
+        //"~/Scripts/kendo/2014.1.318/kendo.pager.min.js",
+        //"~/Scripts/kendo/2014.1.318/kendo.tabstrip.min.js",
+        //"~/Scripts/kendo/2014.1.318/kendo.sortable.min.js",
+        //"~/Scripts/kendo/2014.1.318/kendo.grid.min.js",
+        //"~/Scripts/kendo/2014.1.318/kendo.validator.min.js",
         "~/Scripts/angular-kendo.js",
         "~/Scripts/app/*.js"
         ));

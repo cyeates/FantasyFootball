@@ -164,16 +164,12 @@
     <Content Include="Content\css\business-casual.css" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\img\bg.jpg" />
-    <Content Include="Content\img\intro-pic.jpg" />
-    <Content Include="Content\img\slide-1.jpg" />
-    <Content Include="Content\img\slide-2.jpg" />
-    <Content Include="Content\img\slide-3.jpg" />
     <Content Include="Content\kendo\2014.1.318\Black\editor.png" />
     <Content Include="Content\kendo\2014.1.318\Black\imagebrowser.png" />
     <Content Include="Content\kendo\2014.1.318\Black\indeterminate.gif" />
     <Content Include="Content\kendo\2014.1.318\Black\loading-image.gif" />
     <Content Include="Content\kendo\2014.1.318\Black\loading.gif" />
-    <Content Include="Content\kendo\2014.1.318\Black\loading_2x.gif" />
+    <Content Include="Content\img\loading_2x.gif" />
     <Content Include="Content\kendo\2014.1.318\Black\slider-h.gif" />
     <Content Include="Content\kendo\2014.1.318\Black\slider-v.gif" />
     <Content Include="Content\kendo\2014.1.318\Black\sprite.png" />
